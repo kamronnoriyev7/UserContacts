@@ -4,8 +4,9 @@ namespace UserContacts.Bll.Services;
 
 public interface IAuthService
 {
-    Task LogOut(string token);
     Task<long> SignUpUserAsync(UserCreateDto userCreateDto);
     Task<LoginResponseDto> LoginUserAsync(UserLoginDto userLoginDto);
+    Task LogOut(string token);
+   
     Task<LoginResponseDto> RefreshTokenAsync(RefreshRequestDto request);
 }
